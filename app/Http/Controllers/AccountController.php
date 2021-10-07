@@ -35,13 +35,15 @@ class AccountController extends Controller
             ->first();
         $model_no = $model->model_no;
 
+
         $data['session_available'] = ModelsApi::CheckSession($auth_id);
         if($data['session_available'] == "Y"){
             $data['name'] = User::where('id', $auth_id)->first()->name;
             $data['model_no'] = $model_no;
         }
 
-        $data['model'] = ModelsApi::GetModel($model_no)->first();
+        $data['model'] = ModelsApi::GetModel()->where('model_no', $model_no)->first();
+
 
         return view('website.auth.account')->with($data);
     }

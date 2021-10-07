@@ -27,7 +27,7 @@
         </div>
            <div class="row">
                @foreach($vip_models as $model)
-               <div class="col-md-4">
+               <div class="col-sm-3">
                    <div class="prd-grid prd-carousel js-prd-carousel-tab slick-arrows-aside-simple slick-arrows-mobile-lg data-to-show-4 data-to-show-md-3 data-to-show-sm-3 data-to-show-xs-2 js-product-isotope-sm" data-slick='{"slidesToShow": 1, "slidesToScroll": 2}'>
                        <div class="prd prd-has-loader prd-new prd-popular">
                            <div class="prd-inside">
@@ -68,7 +68,7 @@
         </div>
         <div class="row">
             @foreach($reg_models as $model)
-                <div class="col-xl-4">
+                <div class="col-sm-3">
                     <div class="js-prd-carousel-tab" data-slick='{"slidesToShow": 1, "slidesToScroll": 2}'>
                         <div class="prd prd-has-loader prd-new prd-popular">
                             <div class="prd-inside">

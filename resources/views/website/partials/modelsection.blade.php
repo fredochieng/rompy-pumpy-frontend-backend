@@ -8,7 +8,7 @@
                             @csrf
                             <div class="row">
                                     <div class="form-group"> <div class="col-xl-12"> <select class="form-control js-example-basic-single" name="city_id" required>
-                                            <option value="">Select service</option>
+                                            <option value="">Select loaction</option>
                                             @foreach ($cities as $city)
                                                 <option value="{{ $city->c_city_id }}">{{ $city->city_name }}
                                                 </option>
@@ -27,7 +27,7 @@
         </div>
            <div class="row">
                @foreach($vip_models as $model)
-               <div class="col-md-4">
+               <div class="col-sm-3">
                    <div class="js-prd-carousel-tab" data-slick='{"slidesToShow": 1, "slidesToScroll": 2}'>
                        <div class="prd prd-has-loader prd-new prd-popular">
                            <div class="prd-inside">
@@ -57,7 +57,7 @@
         <div class="title-with-right">
             <h2 class="h1-style text-capitalize">Regular Models</h2>
             <div class="prd-carousel-tabs js-filters-prd d-none d-md-flex" data-grid="tabCarousel-01">
-                <span class="active" data-filter="prd">All</span> <span data-filter="prd-popular"></span>
+                <span class="active" data-filter="prd"></span> <span data-filter="prd-popular"></span>
                 <span data-filter="prd-sale"></span> <span data-filter="prd-new"></span></div>
             <div class="prd-carousel-tabs js-filters-prd-sm d-md-none">
                 <span class="filters-label active" data-filter=".prd"></span>
@@ -67,7 +67,7 @@
         </div>
         <div class="row">
             @foreach($reg_models as $model)
-                <div class="col-xl-4">
+                <div class="col-sm-3">
                     <div class="js-prd-carousel-tab" data-slick='{"slidesToShow": 1, "slidesToScroll": 2}'>
                         <div class="prd prd-has-loader prd-new prd-popular">
                             <div class="prd-inside">

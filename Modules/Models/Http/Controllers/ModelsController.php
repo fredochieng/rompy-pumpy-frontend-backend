@@ -51,7 +51,6 @@ class ModelsController extends Controller
         //     abort(401, 'You are not allowed to access this page.');
         // }
 
-        toastr()->success('User added successfully');
         $data['countries'] = Selector::GetCountries();
         $data['builds'] = Selector::GetBuilds();
         $data['services'] = Selector::GetServices();
@@ -95,19 +94,19 @@ class ModelsController extends Controller
 
         if ($email_validator->fails() && !$phone_validator->fails()) {
 
-            toastr()->success('Email already registered!');
+            toastr()->error('Email already registered!');
             DB::rollBack();
             return back();
         } elseif (!$email_validator->fails() && $phone_validator->fails()) {
-            toastr()->success('Phone already registered!');
+            toastr()->error('Phone already registered!');
             DB::rollBack();
             return back();
         } elseif ($email_validator->fails() && $phone_validator->fails()) {
-            toastr()->success('Email and phone already registered!');
+            toastr()->error('Email and phone already registered!');
             DB::rollBack();
             return back();
         }elseif($age < 18){
-            toastr()->success('Minimum age should be 18 years');
+            toastr()->error('Minimum age should be 18 years');
             DB::rollBack();
             return back();
         } else {
