@@ -81,7 +81,7 @@ class ModelsController extends Controller
         $service_id = $request->service_id;
         $availability_id = $request->availability_id;
         $about = $request->about;
-        $password = Hash::make($request->password);
+        //$password = Hash::make($request->password);
 
 
         /** Run validator for both email and phone number */
@@ -114,21 +114,15 @@ class ModelsController extends Controller
 
             /** Generate random password */
             $password = Models::GeneratePassword(8);
+            $password = '1234.abc';
 
             $user = new User();
             $user->name = $name;
             $user->email = $email;
-            $user->password = Hash::make('1234.abc');
+            $user->password = Hash::make($password);
 
             DB::beginTransaction();
             try {
-
-                 /** Process the image */
-                 $file = $request->file('preview_image');
-                 $file_name = Models::GeneratePassword(30).$file->getClientOriginalName();
-                 $file->move('uploads/model_preview_images', $file_name);
-                 $preview_image_url = 'uploads/model_preview_images/' . $file_name;
-
                 $user->save();
                 $saved_user_id = $user->id;
 
@@ -151,6 +145,12 @@ class ModelsController extends Controller
                 $intMax = (10 ** $length) - 1;  // 999...
 
                 $model_no = mt_rand($intMin, $intMax);
+
+                /** Process the image */
+                $file = $request->file('preview_image');
+                $file_name = Models::GeneratePassword(30).$file->getClientOriginalName();
+                $file->move('uploads/model_preview_images', $file_name);
+                $preview_image_url = 'uploads/model_preview_images/' . $file_name;
 
                 /** Save model details */
                 $model = new Models();

@@ -127,7 +127,7 @@
                                         <label for="exampleInputFile">Preview Image</label>
                                         <div class="input-group">
                                           <div class="custom-file">
-                                            <input type="file" required class="custom-file-input" name="preview_image" accept="image/*" id="exampleInputFile">
+                                            <input type="file" required class="custom-file-input" name="preview_image" accept="image/*">
                                             <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                                           </div>
                                         </div>
