@@ -117,7 +117,7 @@ class AccountController extends Controller
     /** Get model subs */
     public function get_model_subs($model_no){
         $auth_id = Auth::id();
-        $data['model'] = ModelsApi::GetModel($model_no)->first();
+        $data['model'] = ModelsApi::GetModel()->where('model_no', $model_no)->first();
 
         $data['session_available'] = ModelsApi::CheckSession($auth_id);
         if($data['session_available'] == "Y"){
@@ -133,7 +133,7 @@ class AccountController extends Controller
     /** Get model services */
     public function get_model_services($model_no){
         $auth_id = Auth::id();
-        $data['model'] = ModelsApi::GetModel($model_no)->first();
+        $data['model'] = ModelsApi::GetModel()->where('model_no', $model_no)->first();
 
         $data['session_available'] = ModelsApi::CheckSession($auth_id);
         if($data['session_available'] == "Y"){
@@ -151,8 +151,10 @@ class AccountController extends Controller
     /** Model add new service */
     public function add_model_services(Request $request){
         $model_id = Auth::id();
+
         //$model_id = $request->model_id;
         $service_id = $request->service_id;
+
         /** add model services in m_services table */
         $count = count($service_id);
 
@@ -176,7 +178,7 @@ class AccountController extends Controller
     /** Get model pics */
     public function get_model_pics($model_no){
         $auth_id = Auth::id();
-        $data['model'] = ModelsApi::GetModel($model_no)->first();
+        $data['model'] = ModelsApi::GetModel()->where('model_no', $model_no)->first();
 
         $data['session_available'] = ModelsApi::CheckSession($auth_id);
         if($data['session_available'] == "Y"){
@@ -224,7 +226,7 @@ class AccountController extends Controller
 /** Load change password form */
     public function show_change_password_form($model_no){
         $auth_id = Auth::id();
-        $data['model'] = ModelsApi::GetModel($model_no)->first();
+        $data['model'] = ModelsApi::GetModel()->where('model_no', $model_no)->first();
 
         $data['session_available'] = ModelsApi::CheckSession($auth_id);
         if($data['session_available'] == "Y"){
