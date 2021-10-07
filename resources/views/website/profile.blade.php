@@ -35,15 +35,15 @@
                     <div class="prd-block_info">
                         <div class="js-prd-d-holder prd-holder">
                             <div class="prd-block_title-wrap">
-                                <h1 class="prd-block_title">{{ $model->name }}</h1>
+                                <h1 class="prd-block_title text-capitalize">{{ $model->name }}</h1>
                                 <div class="prd-block__labels label-new"><span class="prd-label--new">{{ $model_subs->sub_pkg_name }}</span></div>
                             </div>
                             <div class="prd-block_info-top">
-                                <div class="product-sku">Phone No: <span>{{ $model->phone_no }}</span></div>
-                                <div class="prd-availability">Age: <span>{{ $model->age }}</span></div>
-                                <div class="prd-availability">Country: <span>{{ $model->country_name }}</span></div>
-                                <div class="prd-availability">Location/Area: <span>{{ $model->city_name }}</span></div>
-                                <div class="prd-availability">Ethnicity: <span>{{ $model->city_name }}</span></div>
+                                <div class="product-sku text-capitalize">Phone No: <span>{{ $model->phone_no }}</span></div>
+                                <div class="prd-availability text-capitalize">Age: <span>{{ $model->age }}</span></div>
+                                <div class="prd-availability text-capitalize">Country: <span>{{ $model->country_name }}</span></div>
+                                <div class="prd-availability text-capitalize">Location/Area: <span>{{ $model->city_name }}</span></div>
+                                <div class="prd-availability text-capitalize">Ethnicity: <span>{{ $model->city_name }}</span></div>
                             </div>
                             <div class="prd-block_description topline">
     {{--                                <h4>Age: <span class="prd-availability" style="color: red">{{ $model->age }}</h4>--}}
@@ -56,13 +56,13 @@
                                 <table class="table table-striped table-borderless h-font text-uppercase">
                                     <tbody>
                                     <tr>
-                                        <td>SERVICES</td>
-                                        <td><b>  @foreach ($model_services as $model_service)
+                                        <td class="text-capitalize">SERVICES</td>
+                                        <td><b>@foreach ($model_services as $model_service)
                                                     {{ $model_service->service }},
                                                 @endforeach</b></td>
                                     </tr>
                                     <tr>
-                                        <td>AVailability</td>
+                                        <td class="text-capitalize">Availability</td>
                                         <td><b>@foreach ($model_availabilities as $model_availability)
                                                     {{ $model_availability->availability }},
                                                 @endforeach</b></td>
@@ -73,7 +73,7 @@
                         </div>
                         <div class="prd-block_actions topline">
                             <div class="btn-wrap">
-                                <a href="tel:{{ $model->phone_no }}" class="btn btn--add-to-cart"><i class="icon icon-phone"></i> Call Me Now {{ $model->phone_no }}</a>
+                                <a href="tel:{{ $model->phone_no }}" class="btn btn--add-to-cart text-capitalize"><i class="icon icon-phone"></i> Call Me Now {{ $model->phone_no }}</a>
                             </div>
                         </div>
                     </div>

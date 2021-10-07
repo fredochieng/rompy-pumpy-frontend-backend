@@ -15,7 +15,7 @@
                                             @endforeach
                                         </select></div>
                                 </div> <div class="col-sm-6">
-                                    <button type="submit" class="btn ml-3">Search Models</button></div>
+                                    <button type="submit" class="btn ml-3 text-capitalize">Search Models</button></div>
                             </div>
                             </div>
                     </form>
@@ -41,7 +41,7 @@
                                    <h2 class="prd-title"><a href="/profile/{{ $model->model_no }}"><p style="font-weight: normal" class="text-capitalize">Location: {{ $model->country_name }}/{{ $model->city_name  }}</p></a></h2>
                                </div>
                                <div class="prd-action">
-                                   <a href="tel:{{ $model->phone_no }}" class="btn" ><i class="icon icon-phone"></i> Call Me Now On {{ $model->phone_no }}</a>
+                                   <a href="tel:{{ $model->phone_no }}" class="btn text-capitalize" ><i class="icon icon-phone"></i> Call Me Now On {{ $model->phone_no }}</a>
                                </div>
                            </div>
                        </div>
@@ -81,7 +81,7 @@
                                     <h2 class="prd-title"><a href="/profile/{{ $model->model_no }}"><p style="font-weight: normal" class="text-capitalize">Location: {{ $model->country_name }}/{{ $model->city_name  }}</p></a></h2>
                                 </div>
                                 <div class="prd-action">
-                                    <a href="tel:{{ $model->phone_no }}" class="btn" ><i class="icon icon-phone"></i> Call Me Now On {{ $model->phone_no }}</a>
+                                    <a href="tel:{{ $model->phone_no }}" class="btn text-capitalize" ><i class="icon icon-phone"></i> Call Me Now On {{ $model->phone_no }}</a>
                                 </div>
                             </div>
                         </div>

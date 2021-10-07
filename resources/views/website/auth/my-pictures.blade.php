@@ -7,7 +7,7 @@
                     @include('website.auth.partials.account-tabs')
                 </div>
                 <div class="col-md-9 aside">
-                    <h2>My Pictures</h2>
+                    <h2 class="text-capitalize">My Pictures</h2>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card">
@@ -17,7 +17,7 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Creation Date</th>
+                                                <th scope="col" class="text-capitalize">Creation Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -46,7 +46,7 @@
                                     </div>
                                     <div class="card mt-3 d-none" id="uploadPicture">
                                         <div class="card-body">
-                                            <h3>Upload New Picture</h3>
+                                            <h3 class="text-capitalize">Upload New Picture</h3>
                                             <form method="POST" action="{{ route('model.add_picture') }}" autocomplete="off"
                                                   enctype='multipart/form-data'>
                                                 @csrf
@@ -55,8 +55,8 @@
                                                     <div class="form-group"><input type="file" required name="picture" class="form-control" ></div>
                                                 </div>
                                             </div>
-                                            <div class="mt-2"><button type="reset" class="btn btn--alt js-close-form" data-form="#uploadPicture">Cancel</button>
-                                                <button type="submit" class="btn ml-1">Upload Picture</button></div>
+                                            <div class="mt-2"><button type="reset" class="btn btn--alt js-close-form text-capitalize" data-form="#uploadPicture">Cancel</button>
+                                                <button type="submit" class="btn ml-1 text-capitalize">Upload Picture</button></div>
                                             </form>
                                         </div>
                                     </div>

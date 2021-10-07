@@ -50,7 +50,7 @@
                     <div class="col-auto hdr-topline-left">
                     </div>
                     <div class="col hdr-topline-center">
-                        <div class="custom-text"><span></span> SUBSCRIBE TODAY AS LOW AS KES 300</div>
+                        <div class="custom-text"><span class="text-capitalize">SUBSCRIBE TODAY AS LOW AS KES 2000</span></div>
                         <div class="custom-text"><i class="icon icon-mobile"></i><b>+254716434878</b></div>
                     </div>
                     <div class="col-auto hdr-topline-right links-holder">
@@ -61,21 +61,21 @@
                         <!-- Header Account -->
                         @if($session_available == "Y")
                         <div class="dropdn dropdn_account @@classes"><a href="/account" class="dropdn-link"><i class="icon icon-person"></i>
-                                <span>Welcome {{ $name }}</span>
+                                <span class="text-capitalize">Welcome {{ $name }}</span>
                                 @else
                                     <div class="dropdn dropdn_account @@classes"><a href="/auth/login" class="dropdn-link"><i class="icon icon-person"></i>
-                                            <span>My Account</span>
+                                            <span class="text-capitalize">My Account</span>
                                 @endif
                             </a>
                             <div class="dropdn-content">
                                 <div class="container">
-                                    <div class="dropdn-close">CLOSE</div>
+                                    <div class="dropdn-close text-capitalize">CLOSE</div>
                                     <ul>
                                         @if($session_available == "Y")
-                                        <li><a href="/account/{{ $model_no }}"><i class="icon icon-person-fill"></i><span>My Account</span></a></li>
-                                        <li><a href="{{ URL::route('sign_out') }}"><i class="icon icon-lock"></i><span>Log Out</span></a></li>
+                                        <li><a href="/account/{{ $model_no }}"><i class="icon icon-person-fill"></i><span class="text-capitalize">My Account</span></a></li>
+                                        <li><a href="{{ URL::route('sign_out') }}"><i class="icon icon-lock"></i><span class="text-capitalize">Log Out</span></a></li>
                                         @else
-                                            <li><a href="/auth/login"><i class="icon icon-person-fill"></i><span>My Account</span></a></li>
+                                            <li><a href="/auth/login"><i class="icon icon-person-fill"></i><span class="text-capitalize">My Account</span></a></li>
                                         @endif
                                     </ul>
                                 </div>
@@ -114,7 +114,7 @@
     <div class="sticky-holder compensate-for-scrollbar">
         <div class="container">
             <div class="row"><a href="#" class="mobilemenu-toggle show-mobile"><i class="icon icon-menu"></i></a>
-                <div class="col-auto logo-holder-s"><a href="index.html" class="logo"><img src="{{ asset('website/images/logo.jpeg') }}" srcset="images/logo.jpeg') }} 2x" alt=""></a></div>
+                <div class="col-auto logo-holder-s"><a href="/" class="logo"><img src="{{ asset('website/images/logo.jpeg') }}" srcset="images/logo.jpeg') }} 2x" alt=""></a></div>
                 <!--navigation-->
                 <div class="prev-menu-scroll icon-angle-left prev-menu-js"></div>
                 <div class="nav-holder-s"></div>

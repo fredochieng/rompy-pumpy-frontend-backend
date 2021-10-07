@@ -7,7 +7,7 @@
                     @include('website.auth.partials.account-tabs')
                 </div>
                 <div class="col-md-9 aside">
-                    <h2>My Services</h2>
+                    <h2 class="text-capitalize">My Services</h2>
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="card">
@@ -17,8 +17,8 @@
                                             <thead>
                                             <tr>
                                                 <th scope="col">#</th>
-                                                <th scope="col">Service Name</th>
-                                                <th scope="col">Creation Date</th>
+                                                <th scope="col" class="text-capitalize">Service Name</th>
+                                                <th scope="col" class="text-capitalize">Creation Date</th>
                                             </tr>
                                             </thead>
                                             <tbody>
@@ -54,13 +54,8 @@
                                                         </select>
 
                                                 </div>
-{{--                                                <select class="js-example-basic-single" name="state">--}}
-{{--                                                    <option value="AL">Alabama</option>--}}
-{{--                                                    --}}
-{{--                                                    <option value="WY">Wyoming</option>--}}
-{{--                                                </select>--}}
-                                                <div class="mt-2"><button type="reset" class="btn btn--alt js-close-form" data-form="#addService">Cancel</button>
-                                                    <button type="submit" class="btn ml-1">Add Service</button></div>
+                                                <div class="mt-2"><button type="reset" class="btn btn--alt js-close-form text-capitalize" data-form="#addService">Cancel</button>
+                                                    <button type="submit" class="btn ml-1 text-capitalize">Add Service</button></div>
                                             </form>
                                         </div>
                                     </div>
@@ -85,8 +80,8 @@
                                         </select></div>
                                 </div>
                             </div>
-                            <div class="mt-2"><button type="reset" class="btn btn--alt js-close-form" data-form="#updateDetails">Cancel</button>
-                                <button type="submit" class="btn ml-3">Add New Service</button></div>
+                            <div class="mt-2"><button type="reset" class="btn btn--alt js-close-form text-capitalize" data-form="#updateDetails">Cancel</button>
+                                <button type="submit" class="btn ml-3 text-capitalize">Add New Service</button></div>
                             </form>
                         </div>
                     </div>
