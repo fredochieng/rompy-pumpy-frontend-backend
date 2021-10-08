@@ -1,12 +1,14 @@
+
 <header class="hdr global_width hdr_sticky hdr-mobile-style2">
+
     <!-- Promo TopLine -->
-    <div class="bgcolor" style="background-image: url('website/images/promo-topline-bg.png');">
-        <div class="promo-topline" data-expires="1" style="display: none;">
-            <div class="container">
-                <div class="promo-topline-item"><b>GET 10% OFF YOUR FIRST SUBSCRIPTION WITH US&nbsp;<span class="hidden-xs">&nbsp</span></b></div>
-            </div><a href="#" class="promo-topline-close js-promo-topline-close"><i class="icon-cross"></i></a>
-        </div>
-    </div>
+{{--    <div class="bgcolor" style="background-image: url('website/images/promo-topline-bg.png');">--}}
+{{--        <div class="promo-topline" data-expires="1" style="display: none;">--}}
+{{--            <div class="container">--}}
+{{--                <div class="promo-topline-item"><b>GET 10% OFF YOUR FIRST SUBSCRIPTION WITH US&nbsp;<span class="hidden-xs">&nbsp</span></b></div>--}}
+{{--            </div><a href="#" class="promo-topline-close js-promo-topline-close"><i class="icon-cross"></i></a>--}}
+{{--        </div>--}}
+{{--    </div>--}}
     <!-- /Promo TopLine -->
     <!-- Mobile Menu -->
     <div class="mobilemenu js-push-mbmenu">

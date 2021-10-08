@@ -98,7 +98,7 @@
             <span class="info-box-icon"><i class="far fa-thumbs-up"></i></span>
 
             <div class="info-box-content">
-              <span class="info-box-text">Inactive Models</span>
+              <span class="info-box-text">Total Sub Amount</span>
               <span class="info-box-number">{{ $total_sub_amount }}</span>
 
               <div class="progress">

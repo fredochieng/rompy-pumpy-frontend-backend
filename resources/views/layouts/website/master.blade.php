@@ -3,11 +3,13 @@
    @include('layouts.website.preloader')
 
     {{-- Header --}}
+   @include('website.partials.ads-area')
     @include('layouts.website.header')
     <div class="page-content">
         @yield('content')
     </div>
     {{-- Footer --}}
+
     @include('layouts.website.footer')
 {{-- Modals --}}
 @include('layouts.website.scripts')

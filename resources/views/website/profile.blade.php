@@ -43,7 +43,7 @@
                                 <div class="prd-availability text-capitalize">Age: <span>{{ $model->age }}</span></div>
                                 <div class="prd-availability text-capitalize">Country: <span>{{ $model->country_name }}</span></div>
                                 <div class="prd-availability text-capitalize">Location/Area: <span>{{ $model->city_name }}</span></div>
-                                <div class="prd-availability text-capitalize">Ethnicity: <span>{{ $model->city_name }}</span></div>
+                                <div class="prd-availability text-capitalize">Ethnicity: <span>{{ $model->ethnicity }}</span></div>
                             </div>
                             <div class="prd-block_description topline">
     {{--                                <h4>Age: <span class="prd-availability" style="color: red">{{ $model->age }}</h4>--}}

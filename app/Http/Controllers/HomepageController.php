@@ -15,7 +15,8 @@ class HomepageController extends Controller
         //$data['models'] = ModelsApi::GetModels();
 
         $data['vip_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 1);
-        $data['reg_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 2);
+        $data['prem_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 3);
+        $data['reg_models'] = ModelsApi::GetModels()->wherein('sub_pkg_id', 1, 2);
         $data['cities'] = Selector::GetCities();
         //dd($data['cities']);
         $auth_id = Auth::id();
@@ -46,7 +47,8 @@ class HomepageController extends Controller
         $data['city_name'] = $city->city_name;
        // dd($city_id);
         $data['vip_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 1)->where('c_city_id', $city_id);
-        $data['reg_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 2)->where('c_city_id', $city_id);
+        $data['prem_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 3)->where('c_city_id', $city_id);
+        $data['reg_models'] = ModelsApi::GetModels()->wherein('sub_pkg_id', 1, 2)->where('c_city_id', $city_id);
         $data['cities'] = Selector::GetCities();
         //dd($data['cities']);
         $auth_id = Auth::id();
