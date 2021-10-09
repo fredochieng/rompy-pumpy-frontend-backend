@@ -86,7 +86,6 @@
               <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Subscriptions</a></li>
               <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"></a></li>
               <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab"></a></li>
-                <button type="button" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}" class="btn btn-info"><i class="fas fa-solid fa-sync-alt"></i> Renew Subscription</button>
               @if ($sub_available == "No")
               <button type="button" data-toggle="modal" data-target="#ModalAddSubscription_{{$model->user_id}}" class="btn btn-info"><i class="fas fa-solid fa-plus"></i> Add Subscription</button>
               @else
