@@ -36,10 +36,13 @@
                                                 <div class="col-sm-4"><label class="text-capitalize">Country</label>
                                                     <div class="form-group"><input type="text" name="country_name" value="{{ $model->country_name }}" readonly class="form-control"></div>
                                                 </div>
-                                                <div class="col-sm-4"><label class="text-capitalize">Location/City</label>
+                                                <div class="col-sm-4"><label class="text-capitalize">City</label>
                                                     <div class="form-group"><input type="text" name="city_name" value="{{ $model->city_name }}" readonly class="form-control"></div>
                                                 </div>
-                                                <div class="col-sm-4"><label class="text-capitalize">Ethnicity</label>
+                                                <div class="col-sm-4"><label class="text-capitalize">Town</label>
+                                                    <div class="form-group"><input type="text" name="town_name" value="{{ $model->town_name }}" readonly class="form-control"></div>
+                                                </div>
+                                                <div class="col-sm-6"><label class="text-capitalize">Ethnicity</label>
                                                     <div class="form-group"><input type="text" name="ethnicity_name" value="{{ $model->ethnicity }}" readonly class="form-control"></div>
                                                 </div>
                                                 <div class="col-sm-6"><label class="text-capitalize">Build</label>

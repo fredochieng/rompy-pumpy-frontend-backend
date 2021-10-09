@@ -47,14 +47,17 @@ class Models extends Model
             'u.id as user_id',
             'u.name',
             'u.email',
+            'u.account_status',
             'co.country_name',
             'ct.city_name',
+            't.town_name',
             'et.ethnicity',
             'bl.build'
         )
             ->leftJoin('users as u', 'models.m_model_id', 'u.id')
             ->leftJoin('countries as co', 'models.country_id', 'co.id')
             ->leftJoin('cities as ct', 'models.city_id', 'ct.id')
+            ->leftJoin('towns as t', 'models.m_town_id', 't.id')
             ->leftJoin('ethnicities as et', 'models.ethnicity_id', 'et.id')
             ->leftJoin('build as bl', 'models.build_id', 'bl.id')
             ->get();

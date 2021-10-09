@@ -12,11 +12,11 @@ use Illuminate\Support\Facades\DB;
 class HomepageController extends Controller
 {
     public function homepage(){
-        //$data['models'] = ModelsApi::GetModels();
-
         $data['vip_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 1);
         $data['prem_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 3);
-        $data['reg_models'] = ModelsApi::GetModels()->wherein('sub_pkg_id', 1, 2);
+        $data['reg_models'] = ModelsApi::GetModels()->wherein('sub_pkg_id', [1, 2]);
+
+        //dd($data['vip_models']);
         $data['cities'] = Selector::GetCities();
         //dd($data['cities']);
         $auth_id = Auth::id();
@@ -48,7 +48,7 @@ class HomepageController extends Controller
        // dd($city_id);
         $data['vip_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 1)->where('c_city_id', $city_id);
         $data['prem_models'] = ModelsApi::GetModels()->where('sub_pkg_id', 3)->where('c_city_id', $city_id);
-        $data['reg_models'] = ModelsApi::GetModels()->wherein('sub_pkg_id', 1, 2)->where('c_city_id', $city_id);
+        $data['reg_models'] = ModelsApi::GetModels()->wherein('sub_pkg_id', [1, 2])->where('c_city_id', $city_id);
         $data['cities'] = Selector::GetCities();
         //dd($data['cities']);
         $auth_id = Auth::id();
@@ -149,13 +149,24 @@ class HomepageController extends Controller
             if($role_id == 1){
                 return redirect('/home');
             }elseif($role_id == 2){
-                $model_no = DB::table('models')->select(DB::raw('models.m_model_id'), DB::raw('models.model_no'))
-                    ->where('m_model_id', $user_id)
-                    ->first()->model_no;
-                return redirect('/account/'.$model_no);
+                /** check if account is deactivated */
+                $account_status = User::where('id', $user_id)->first()->account_status;
+
+                if($account_status == 1){
+
+                    $model_no = DB::table('models')->select(DB::raw('models.m_model_id'), DB::raw('models.model_no'))
+                        ->where('m_model_id', $user_id)
+                        ->first()->model_no;
+                    return redirect('/account/'.$model_no);
+                }else{
+                  
+                    toastr()->error('Account has been deactivated');
+                    return back();
+                }
+
             }
 
-            toastr()->success('Login successful');
+            //toastr()->success('Login successful');
 
         } else {
 

@@ -19,3 +19,6 @@ Route::get('/model/add', [Modules\Models\Http\Controllers\ModelsController::clas
 Route::get('/model/list', [Modules\Models\Http\Controllers\ModelsController::class, 'index'])->name('models.list');
 Route::get('/model/details/{id}', [Modules\Models\Http\Controllers\ModelsController::class, 'details'])->name('model.details');
 Route::post('/model/save', [Modules\Models\Http\Controllers\ModelsController::class, 'store'])->name('model.save');
+
+Route::post('/model/deactivate', [Modules\Models\Http\Controllers\ModelsController::class, 'deactivate'])->name('model.deactivate');
+Route::post('/model/activate', [Modules\Models\Http\Controllers\ModelsController::class, 'activate'])->name('model.activate');

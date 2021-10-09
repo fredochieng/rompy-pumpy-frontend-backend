@@ -40,12 +40,14 @@ class ModelsApi extends Controller
             'u.email',
             'co.country_name',
             'ct.city_name',
+            't.town_name',
             'et.ethnicity',
             'bl.build'
         )
             ->leftJoin('users as u', 'models.m_model_id', 'u.id')
             ->leftJoin('countries as co', 'models.country_id', 'co.id')
             ->leftJoin('cities as ct', 'models.city_id', 'ct.id')
+            ->leftJoin('towns as t', 'models.m_town_id', 't.id')
             ->leftJoin('ethnicities as et', 'models.ethnicity_id', 'et.id')
             ->leftJoin('build as bl', 'models.build_id', 'bl.id')
             ->get();
@@ -62,9 +64,11 @@ class ModelsApi extends Controller
             'u.id as user_id',
             'u.name',
             'u.email',
+            'u.account_status',
             'co.country_name',
             'ct.id as c_city_id',
             'ct.city_name',
+            't.town_name',
             'et.ethnicity',
             'bl.build',
             'sb.sub_pkg_id',
@@ -76,11 +80,13 @@ class ModelsApi extends Controller
             ->leftJoin('users as u', 'models.m_model_id', 'u.id')
             ->leftJoin('countries as co', 'models.country_id', 'co.id')
             ->leftJoin('cities as ct', 'models.city_id', 'ct.id')
+            ->leftJoin('towns as t', 'models.m_town_id', 't.id')
             ->leftJoin('ethnicities as et', 'models.ethnicity_id', 'et.id')
             ->leftJoin('build as bl', 'models.build_id', 'bl.id')
             ->leftJoin('subscriptions as sb', 'models.m_model_id', 'sb.s_model_id')
             ->inRandomOrder()
             ->where('sb.sub_status', 1)
+            ->where('u.account_status', 1)
             ->get();
 
         return $active_models;

@@ -24,6 +24,8 @@
                     <th>Gender</th>
                     <th>Age</th>
                     <th>City</th>
+                    <th>Town</th>
+                    <td>#</td>
                 </tr> <!-- end row -->
             </thead>
             <tbody>
@@ -36,7 +38,17 @@
                 <td>{{ $model->gender }}</td>
                 <td>{{ $model->age }}</td>
                 <td>{{ $model->city_name }}</td>
+                <td>{{ $model->account_status }}</td>
+                <td>
+                    @if($model->account_status == 1)
+                    <a href="" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}">Deactivate</a>
+                    @else
+                        <a href="" data-toggle="modal" data-target="#ModalActivateAccount_{{$model->user_id}}">Activate</a>
+                        @endif
+                </td>
             </tr>
+            @include('models::modals.ModalDeactivateAccount')
+            @include('models::modals.ModalActivateAccount')
              @endforeach
             </tbody>
         </table>

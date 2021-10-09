@@ -75,6 +75,7 @@ class ModelsController extends Controller
         $age = Carbon::parse($dob)->diffInYears(Carbon::now());
         $country_id = $request->country_id;
         $city_id = $request->city_id;
+        $town_id = $request->town_id;
         $ethnicity_id = $request->ethnicity_id;
         $build_id = $request->build_id;
         $service_id = $request->service_id;
@@ -161,6 +162,7 @@ class ModelsController extends Controller
                 $model->age = $age;
                 $model->country_id = $country_id;
                 $model->city_id = $city_id;
+                $model->m_town_id = $town_id;
                 $model->ethnicity_id = $ethnicity_id;
                 $model->build_id = $build_id;
                 $model->services = 1;
@@ -253,6 +255,36 @@ class ModelsController extends Controller
         } else {
             abort(403, 'Invalid Request.');
         }
+    }
+
+    /** Deactivate account */
+    public function deactivate(Request $request){
+        $user_id = $request->model_id;
+
+        $user_arr =  array(
+            'account_status' => 2
+        );
+
+        //dd($user_id);
+
+        $deactivate_user = User::where('id', $user_id)->update($user_arr);
+
+        toastr()->success('Account deactivated successfully');
+        return back();
+    }
+
+    /** Activate account */
+    public function activate(Request $request){
+        $user_id = $request->model_id;
+
+        $user_arr =  array(
+            'account_status' => 1
+        );
+
+        $deactivate_user = User::where('id', $user_id)->update($user_arr);
+
+        toastr()->success('Account activated successfully');
+        return back();
     }
 
     /**

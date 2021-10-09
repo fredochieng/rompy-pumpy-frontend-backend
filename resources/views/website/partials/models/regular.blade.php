@@ -24,7 +24,7 @@
                                     <h2 class="prd-title"><a href="/profile/{{ $model->model_no }}"><p style="font-weight: normal" class="text-capitalize">Name: {{ $model->name }}</p></a></h2>
                                     <h2 class="prd-title"><a href="tel:{{ $model->phone_no }}"><p style="font-weight: normal" class="text-capitalize">Phone No: {{ $model->phone_no }}</p></a></h2>
                                     <h2 class="prd-title"><a href="/profile/{{ $model->model_no }}"><p style="font-weight: normal" class="text-capitalize">Age: {{ $model->age }} Years</p></a></h2>
-                                    <h2 class="prd-title"><a href="/profile/{{ $model->model_no }}"><p style="font-weight: normal" class="text-capitalize">Location: {{ $model->country_name }}/{{ $model->city_name  }}</p></a></h2>
+                                    <h2 class="prd-title"><a href="/profile/{{ $model->model_no }}"><p style="font-weight: normal" class="text-capitalize">{{ $model->country_name }} | {{ $model->city_name  }} | {{ $model->town_name }}</p></a></h2>
                                 </div>
                                 <div class="prd-action">
                                     <a href="tel:{{ $model->phone_no }}" class="btn text-capitalize" ><i class="icon icon-phone"></i> Call Me Now On {{ $model->phone_no }}</a>

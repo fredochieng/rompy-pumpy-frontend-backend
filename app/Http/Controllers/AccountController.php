@@ -64,6 +64,7 @@ class AccountController extends Controller
             //$age = Carbon::parse($dob)->diffInYears(Carbon::now());
             $country_id = $request->country_id;
             $city_id = $request->city_id;
+            $town_id = $request->town_id;
             $ethnicity_id = $request->ethnicity_id;
             $build_id = $request->build_id;
             $service_id = $request->service_id;

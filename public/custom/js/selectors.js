@@ -1,6 +1,6 @@
 $(function () {
 
-    /** Town selector */
+    /** City selector */
     $("#country_id").on("change", function (e) {
         var country_id = e.target.value;
 
@@ -19,6 +19,32 @@ $(function () {
                         cityObj.c_city_id +
                         '">' +
                         cityObj.city_name +
+                        "</option>"
+                    );
+                });
+            }
+        );
+    });
+
+    /** Town selector */
+    $("#city_id").on("change", function (e) {
+        var city_id = e.target.value;
+
+        $.get(
+            "/city/get-city-towns?city_id=" + city_id,
+            function (data) {
+                console.log(data);
+                $("#town_id").empty();
+                $("#town_id").append(
+                    '<option value="" disable="true" selected="true">Select town</option>'
+                );
+
+                $.each(data, function (index, townObj) {
+                    $("#town_id").append(
+                        '<option value="' +
+                        townObj.t_town_id +
+                        '">' +
+                        townObj.town_name +
                         "</option>"
                     );
                 });

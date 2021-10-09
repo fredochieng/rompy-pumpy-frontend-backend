@@ -42,7 +42,7 @@
                                 <div class="product-sku text-capitalize">Phone No: <span>{{ $model->phone_no }}</span></div>
                                 <div class="prd-availability text-capitalize">Age: <span>{{ $model->age }}</span></div>
                                 <div class="prd-availability text-capitalize">Country: <span>{{ $model->country_name }}</span></div>
-                                <div class="prd-availability text-capitalize">Location/Area: <span>{{ $model->city_name }}</span></div>
+                                <div class="prd-availability text-capitalize">Location/Area: <span>{{ $model->city_name }} | {{ $model->town_name }}</span></div>
                                 <div class="prd-availability text-capitalize">Ethnicity: <span>{{ $model->ethnicity }}</span></div>
                             </div>
                             <div class="prd-block_description topline">

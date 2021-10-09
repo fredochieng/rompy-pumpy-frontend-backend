@@ -33,6 +33,18 @@ class Selector extends Model
         return $cities;
     }
 
+    /** Get list of towns of selected city */
+    public static function GetTowns()
+    {
+        $towns = DB::table('towns as t')->select(
+            't.id as t_town_id','t.t_city_id','t.town_name'
+        )
+            ->orderBy('t.id', 'asc')
+            ->get();
+
+        return $towns;
+    }
+
      /** Get list of ethnicities */
      public static function GetEthnities()
      {

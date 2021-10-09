@@ -19,6 +19,16 @@ class SelectorController extends Controller
         return response()->json($country_cities);
     }
 
+    //Function to get the towns values based on the selected city
+    public function GetCityTowns(Request $request)
+    {
+        $city_id = $request->city_id;
+
+        $city_towns = Selector::GetTowns()
+            ->where('t_city_id', $city_id);
+        return response()->json($city_towns);
+    }
+
     //Function to get the ethnicities values based on the selected country
     public function GetCountryEthnicities(Request $request)
     {

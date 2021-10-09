@@ -52,6 +52,7 @@ Route::post('/reset/password', [App\Http\Controllers\ForgotPassController::class
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/country/get-country-towns', [App\Http\Controllers\SelectorController::class, 'GetCountryCities']);
+Route::get('/city/get-city-towns', [App\Http\Controllers\SelectorController::class, 'GetCityTowns']);
 Route::get('/country/get-country-ethnicities', [App\Http\Controllers\SelectorController::class, 'GetCountryEthnicities']);
 Route::get('/subscription/get-sub-price', [App\Http\Controllers\SelectorController::class, 'GetSubPkgAmount']);
 Route::get('/subscription/get-sub-end-date', [App\Http\Controllers\SelectorController::class, 'GetSubPkgEndDate']);

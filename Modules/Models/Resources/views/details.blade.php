@@ -38,6 +38,9 @@
                 <b>Age</b> <h6 class="float-right">{{$model->age}} Years</h6>
               </li>
           </ul>
+            <a href="" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}" class="btn btn-info">fddsdssd</a>
+            <button type="button" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}" class="btn btn-info">
+                <i class="fas fa-solid fa-sync-alt"></i> Renew Subscription</button>
         </div>
         <!-- /.card-body -->
       </div>
@@ -66,7 +69,7 @@
               <hr>
 
               <strong><i class="fas fa-map-marker-alt mr-1"></i> Location & Ethnicity</strong>
-              <p class="text-muted">{{$model->city_name}}, {{$model->country_name}}</p>
+                <p class="text-muted">{{$model->country_name}} | {{$model->city_name}} | {{$model->town_name}}</p>
               <p class="text-muted">Ethinicity: {{$model->ethnicity}}</p>
               <hr>
               <strong><i class="far fa-file-alt mr-1"></i> About Model</strong>
@@ -85,6 +88,7 @@
               <li class="nav-item"><a class="nav-link active" href="#activity" data-toggle="tab">Subscriptions</a></li>
               <li class="nav-item"><a class="nav-link" href="#timeline" data-toggle="tab"></a></li>
               <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab"></a></li>
+                <button type="button" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}" class="btn btn-info"><i class="fas fa-solid fa-sync-alt"></i> Renew Subscription</button>
               @if ($sub_available == "No")
               <button type="button" data-toggle="modal" data-target="#ModalAddSubscription_{{$model->user_id}}" class="btn btn-info"><i class="fas fa-solid fa-plus"></i> Add Subscription</button>
               @else
@@ -174,6 +178,7 @@
   @else
   @include('models::modals.ModalRenewSubscription')
   @endif
+@include('models::modals.ModalDeactivateAccount')
 @stop
 
 @section('css')

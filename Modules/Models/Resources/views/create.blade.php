@@ -101,16 +101,24 @@
                                     </div>
                                     <div class="col-sm-4">
                                         <div class="form-group">
-                                            <label>Ethnicity</label>
-                                            <select class="form-control select2" name="ethnicity_id" id="ethnicity_id"
-                                                required>
-                                                <option value=''>Select country first</option>
+                                            <label>Town</label>
+                                            <select class="form-control select2" name="town_id" id="town_id" required>
+                                                <option value="">Select city first</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label>Ethnicity</label>
+                                            <select class="form-control select2" name="ethnicity_id" id="ethnicity_id"
+                                                    required>
+                                                <option value=''>Select country first</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4">
                                         <div class="form-group">
                                             <label>Build</label>
                                             <select class="form-control select2" name="build_id" required required>
@@ -122,7 +130,7 @@
                                             </select>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6">
+                                    <div class="col-sm-4">
                                     <div class="form-group">
                                         <label for="exampleInputFile">Preview Image</label>
                                         <div class="input-group">
