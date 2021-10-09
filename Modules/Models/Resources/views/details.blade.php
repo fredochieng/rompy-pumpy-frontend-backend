@@ -38,9 +38,7 @@
                 <b>Age</b> <h6 class="float-right">{{$model->age}} Years</h6>
               </li>
           </ul>
-            <a href="" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}" class="btn btn-info">fddsdssd</a>
-            <button type="button" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}" class="btn btn-info">
-                <i class="fas fa-solid fa-sync-alt"></i> Renew Subscription</button>
+
         </div>
         <!-- /.card-body -->
       </div>
@@ -178,7 +176,6 @@
   @else
   @include('models::modals.ModalRenewSubscription')
   @endif
-@include('models::modals.ModalDeactivateAccount')
 @stop
 
 @section('css')

@@ -38,7 +38,7 @@
                 <td>{{ $model->gender }}</td>
                 <td>{{ $model->age }}</td>
                 <td>{{ $model->city_name }}</td>
-                <td>{{ $model->account_status }}</td>
+                <td>{{ $model->town_name }}</td>
                 <td>
                     @if($model->account_status == 1)
                     <a href="" data-toggle="modal" data-target="#ModalDeactivateAccount_{{$model->user_id}}">Deactivate</a>
