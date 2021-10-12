@@ -17,7 +17,7 @@
                     <div class="js-prd-carousel-tab" data-slick='{"slidesToShow": 1, "slidesToScroll": 2}'>
                         <div class="prd prd-has-loader prd-new prd-popular">
                             <div class="prd-inside">
-                                <div class="prd-img-area"><a href="/profile/{{ $model->model_no }}" class="prd-img"><img src="{{ asset($model->preview_image) }}" data-srcset="{{ asset($model->preview_image) }}" class="js-prd-img lazyload"></a>
+                                <div class="prd-img-area"><a href="/profile/{{ $model->model_no }}" style="height: 256px;" class="prd-img"><img src="{{ asset($model->preview_image) }}" data-srcset="{{ asset($model->preview_image) }}" class="js-prd-img lazyload"></a>
                                     <div class="gdw-loader"></div>
                                 </div>
                                 <div class="prd-info">

@@ -32,7 +32,7 @@
                     <div class="prd-grid prd-carousel js-prd-carousel-tab slick-arrows-aside-simple slick-arrows-mobile-lg data-to-show-4 data-to-show-md-3 data-to-show-sm-3 data-to-show-xs-2 js-product-isotope-sm" data-slick='{"slidesToShow": 1, "slidesToScroll": 2}'>
                         <div class="prd prd-has-loader prd-new prd-popular">
                             <div class="prd-inside">
-                                <div class="prd-img-area"><a href="/profile/{{ $model->model_no }}" class="prd-img"><img src="{{ asset($model->preview_image) }}" data-srcset="{{ asset($model->preview_image) }}" class="js-prd-img lazyload"></a>
+                                <div class="prd-img-area"><a href="/profile/{{ $model->model_no }}" style="height: 256px;" class="prd-img"><img src="{{ asset($model->preview_image) }}" data-srcset="{{ asset($model->preview_image) }}" class="js-prd-img lazyload"></a>
                                     <div class="gdw-loader"></div>
                                 </div>
                                 <div class="prd-info">
