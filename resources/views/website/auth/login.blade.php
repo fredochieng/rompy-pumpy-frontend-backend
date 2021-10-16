@@ -23,7 +23,7 @@
             <h2 class="text-center text-capitalize">Account Creation</h2>
             <div class="form-wrapper">
                 <p>If you don't have an account with us, please contact us on <a href="tel:+254716434878">+254716434878</a> by calling, sending a text or WhatsApp message for account creation. Only profile details
-                will be required plus a subscription fee of KES 4000 for VIP membership, KES 3000 for premium, and KES 2000 for Regular membership</p><a href="tel:+254716434878" class="btn btn-block text-capitalize">Call Admin Now On +254708823158</a>
+                will be required plus a subscription fee of KES 4,000 for VIP membership, KES 3,000 for premium, and KES 2,000 for Regular membership</p><a href="tel:+254716434878" class="btn btn-block text-capitalize">Call Admin Now On +254708823158</a>
             </div>
         </div>
     </div>
